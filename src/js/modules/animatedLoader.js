@@ -1,6 +1,6 @@
 const appEl = document.querySelector('.app');
 
-export const showAnimatedLoader = () => {
+export const showAnimatedLoader = async () => {
   const animatedLoaderHtml = `
   <div class="animatedLoader">
     <div class="animatedLoader__image"></div>
@@ -12,7 +12,7 @@ export const showAnimatedLoader = () => {
   appEl.insertAdjacentHTML('afterbegin', animatedLoaderHtml);
 };
 
-export const hideAnimatedLoader = () => {
+export const hideAnimatedLoader = async () => {
   appEl.classList.remove('app_flexCenter');
 
   const animatedLoaderEl = document.querySelector('.animatedLoader');

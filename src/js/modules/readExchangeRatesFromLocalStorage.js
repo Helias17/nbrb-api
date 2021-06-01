@@ -12,5 +12,6 @@ export const readExchangeRatesFromLocalStorage = () => {
     console.log('Error during JSON.parse of localStorage nbrn-byr-rates ');
     console.log(err.name);
     console.log(err.message);
+    return null;
   }
 };
