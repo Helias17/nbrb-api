@@ -1,0 +1,611 @@
+<header class="mobile-header">
+  <nav class="mobile-header__menu">
+    <ul class="mobile-header__list">
+      <li class="mobile-header__item" id="userCardMenuItem">
+        <svg class="mobile-header__item-icon mobile-header__item-icon_active" id="userCardMenuIcon">
+          <use xlink:href="#icon-tinder"></use>
+        </svg>
+      </li>
+      <li class="mobile-header__item" id="dialogMenuItem">
+        <svg class="mobile-header__item-icon" id="dialogMenuIcon">
+          <use xlink:href="#icon-dialog"></use>
+        </svg>
+      </li>
+      <li class="mobile-header__item" id="profileMenuItem">
+        <svg class="mobile-header__item-icon" id="profileMenuIcon">
+          <use xlink:href="#icon-user"></use>
+        </svg>
+      </li>
+    </ul>
+  </nav>
+  <div class="settings-close-mobile"></div>
+</header>
+<div class="inner">
+  <div class="inner__col1">
+    <div class="profile-header">
+      <div class="profile-header__arrow"></div>
+      <div class="profile-header__wrap">
+        <div class="profile-header__user-icon"></div>
+        <p class="profile-header__title">My profile</p>
+      </div>
+    </div>
+    <ul class="profile-tabs">
+      <li class="profile-tabs__item profile-tabs__item_active" id="matchesTab">Matches <span
+          class="profile-tabs__item-num" id="newMatchesNum"></span></li>
+      <li class="profile-tabs__item" id="messagesTab">Messages <span class="profile-tabs__item-num"
+          id="newMessagesNum">2</span></li>
+    </ul>
+    <div class="inner__col1-box">
+      <div class="matches">
+        <ul class="matches__list">
+        </ul>
+      </div>
+      <div class="messages messages_hidden">
+        <ul class="messages__list">
+          <li class="messages__item">
+            <div class="messages__item-icon-box">
+              <div class="messages__item-icon messages__item-icon_1"></div>
+            </div>
+            <div class="messages__item-text-box">
+              <p class="messages__item-username">Леля</p>
+              <p class="messages__item-text">
+                Привет, как дела? Давай познакомимся.
+              </p>
+            </div>
+          </li>
+          <li class="messages__item">
+            <div class="messages__item-icon-box">
+              <div class="messages__item-icon messages__item-icon_2"></div>
+            </div>
+            <div class="messages__item-text-box">
+              <p class="messages__item-username">Irene</p>
+              <p class="messages__item-text">
+                Доброе утро!
+              </p>
+            </div>
+          </li>
+          <li class="messages__item">
+            <div class="messages__item-icon-box">
+              <div class="messages__item-icon messages__item-icon_3"></div>
+            </div>
+            <div class="messages__item-text-box">
+              <p class="messages__item-username">Валя</p>
+              <p class="messages__item-text">
+                Давно на тиндере?
+              </p>
+            </div>
+          </li>
+          <li class="messages__item">
+            <div class="messages__item-icon-box">
+              <div class="messages__item-icon messages__item-icon_4"></div>
+            </div>
+            <div class="messages__item-text-box">
+              <p class="messages__item-username">Alena</p>
+              <p class="messages__item-text">
+                Давай вечером попьем кофе
+              </p>
+            </div>
+          </li>
+          <li class="messages__item">
+            <div class="messages__item-icon-box">
+              <div class="messages__item-icon messages__item-icon_5"></div>
+            </div>
+            <div class="messages__item-text-box">
+              <p class="messages__item-username">Незнакомка</p>
+              <p class="messages__item-text">
+                Какой у тебя рост и вес. У меня 180см.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="inner__col1-profile">
+      <form action="" id="formSettingsProfile">
+        <div class="settings" id="settingsProfile">
+          <p class="settings__title">account settings</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_hover-arrow  js-has-nested" data-name="cardNumber">
+              <p class="settings__item-name">Manage payment account</p>
+            </li>
+            <li class="settings__item settings__item_hover-arrow js-has-nested" data-name="email">
+              <p class="settings__item-name">email</p>
+              <p class="settings__item-value" id="userEmailSettings"></p>
+            </li>
+          </ul>
+          <p class="settings__title">discovery settings</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_no-pointer">
+              <p class="settings__item-name">Location</p>
+              <p class="settings__item-value" id="userCity">undefined</p>
+            </li>
+            <li class="settings__item settings__item_no-pointer settings__item_flex-wrap">
+              <p class="settings__item-name">Maximum distance</p>
+              <p class="settings__item-value">
+                <input type="text" disabled name="distance" id="sliderDistanceValue" class="settings__input-distance">km
+              </p>
+              <div class="settings__item-slider" id="sliderDistance"></div>
+            </li>
+            <li class="settings__item settings__item_hover-arrow js-has-nested" data-name="lookingFor">
+              <p class="settings__item-name">Looking for</p>
+              <p class="settings__item-value" id="lookingSettingsTitle"></p>
+            </li>
+            <li class="settings__item settings__item_no-pointer settings__item_flex-wrap">
+              <p class="settings__item-name">Age range</p>
+              <p class="settings__item-value">
+                <input type="text" disabled name="age_range_start" id="ageRangeFrom" class="settings__input-age">-<input
+                  type="text" disabled name="age_range_end" id="ageRangeTo"
+                  class="settings__input-age settings__input-age_to">
+              </p>
+              <div class="settings__item-slider" id="sliderAgeRange"></div>
+            </li>
+            <li class="settings__item settings__item_no-pointer">
+              <p class="settings__item-name">Global</p>
+              <p class="settings__item-value"><input type="checkbox" name="global_mode" id="userGlobalSearch"
+                  class="custom-checkbox"></p>
+            </li>
+            <li class="settings__item settings__item_desc settings__item_no-pointer">
+              <p class="settings__item-desc">
+                Going global will allow you to see people from around the world after you’ve run out of profiles
+                nearby.
+              </p>
+            </li>
+            <li class="settings__item settings__item_no-pointer">
+              <p class="settings__item-name">Show me on Tinder</p>
+              <p class="settings__item-value"><input type="checkbox" name="show_mine" id="userShowmeStatus"
+                  class="custom-checkbox"></p>
+            </li>
+            <li class="settings__item settings__item_desc settings__item_no-pointer">
+              <p class="settings__item-desc">
+                While turned off, you will not be shown in the card stack. You can still see and chat with your
+                matches.
+              </p>
+            </li>
+          </ul>
+          <p class="settings__title">notifications</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_hover-arrow js-has-nested" data-name="notifications">
+              <p class="settings__item-name">Email</p>
+            </li>
+          </ul>
+          <p class="settings__title">Language</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_hover-arrow js-has-nested" data-name="language">
+              <p class="settings__item-name">Language</p>
+              <p class="settings__item-name" id="langMenuTitle"></p>
+            </li>
+          </ul>
+          <p class="settings__title">Help and support</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_hover-arrow js-has-nested" data-name="feedback">
+              <p class="settings__item-name">Feedback form</p>
+            </li>
+          </ul>
+          <p class="settings__title">Legal</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_hover-arrow">
+              <p class="settings__item-name">Cookie policy</p>
+            </li>
+            <li class="settings__item settings__item_hover-arrow">
+              <p class="settings__item-name">Terms of service</p>
+            </li>
+          </ul>
+          <ul class="settings__list settings__list_single">
+            <li class="settings__item settings__item_center">
+              <p class="settings__item-name" id="logoutLink">Logout</p>
+            </li>
+          </ul>
+          <div class="settings__about-app">
+            <!-- <img src="images/tinder-logo.svg" width="30" height="30" alt="" class="settings__logo"> -->
+            Tinder Clone Version 1.0
+          </div>
+          <ul class="settings__list settings__list_single">
+            <li class="settings__item settings__item_center">
+              <p class="settings__item-name" id="deleteAccount">Delete account</p>
+            </li>
+          </ul>
+          <div class="settings__about-app">
+            <a href="https://rs.school/js/" target="_blank">
+              <!-- <img src="images/rs-school-logo.svg" width="55" height="21"
+                class="settings__logo" alt=""> -->
+            </a>
+            © 2021
+            <p class="settings__authors">
+              <a href="https://github.com/choco-cat" target="_blank">Choco-cat</a>
+              <a href="https://github.com/helias17" target="_blank">Helias17</a>
+              <a href="https://github.com/fr3ud" target="_blank">Fr3ud</a>
+            </p>
+          </div>
+        </div>
+        <div class="settings settings_nested" data-name="email">
+          <p class="settings__title">E-mail status</p>
+          <ul class="settings__list">
+            <li class="settings__item settings__item_no-pointer">
+              <p class="settings__item-name" id="userEmailNestedMenu"></p>
+              <p class="settings__item-email-status" id="userEmailStatus"></p>
+            </li>
+            <li class="settings__item settings__item_desc settings__item_no-pointer">
+              <p class="settings__item-desc settings__item-desc_red" id="userEmailStatusNote">
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="settings settings_nested" data-name="cardNumber">
+          <p class="settings__title">Card number</p>
+          <div class="credit-card">
+            <input type="text" placeholder="Cardholder name" class="credit-card__input">
+            <input type="text" placeholder="Card number" class="credit-card__input">
+            <div class="credit-card__box">
+              <div>
+                <input type="text" placeholder="MM/YY" class="credit-card__input">
+              </div>
+              <div>
+                <input type="text" placeholder="CVC" class="credit-card__input credit-card__input_cvc">
+              </div>
+            </div>
+            <button class="credit-card__btn">Save</button>
+          </div>
+        </div>
+        <div class="settings settings_nested" data-name="lookingFor">
+          <p class="settings__title">Looking for</p>
+          <div class="settings__list" id="settingsLooking">
+            <label class="settings__item" for="genderMen">
+              <p class="settings__item-name">Men</p>
+              <p class="settings__item-value">
+                <input type="radio" name="looking" value="1" data-num="1" data-text="Men" class="custom-radio"
+                  id="genderMen">
+              </p>
+            </label>
+            <label class="settings__item" for="genderWomen">
+              <p class="settings__item-name">Women</p>
+              <p class="settings__item-value">
+                <input type="radio" name="looking" value="2" data-num="2" data-text="Women" class="custom-radio"
+                  id="genderWomen">
+              </p>
+            </label>
+            <label class="settings__item" for="genderTrans">
+              <p class="settings__item-name">Trans</p>
+              <p class="settings__item-value">
+                <input type="radio" name="looking" value="3" data-num="3" data-text="Trans" class="custom-radio"
+                  id="genderTrans">
+              </p>
+            </label>
+            <label class="settings__item" for="genderEveryone">
+              <p class="settings__item-name">Everyone</p>
+              <p class="settings__item-value">
+                <input type="radio" name="looking" value="0" data-num="0" data-text="Everyone" class="custom-radio"
+                  id="genderEveryone">
+              </p>
+            </label>
+            <div class="settings__item settings__item_desc settings__item_no-pointer">
+              <p class="settings__item-desc" id="genderNotice">
+                You will only see women in the discovery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings settings_nested" data-name="notifications">
+          <p class="settings__title">E-mail notifications</p>
+          <div class="settings__list">
+            <label class="settings__item" for="newMatchesNotifications">
+              <p class="settings__item-name">New matches</p>
+              <p class="settings__item-value">
+                <input type="checkbox" class="custom-checkbox" id="newMatchesNotifications">
+              </p>
+            </label>
+            <label class="settings__item" for="newMessagesNotifications">
+              <p class="settings__item-name">Messages</p>
+              <p class="settings__item-value">
+                <input type="checkbox" value="messages" class="custom-checkbox" id="newMessagesNotifications">
+              </p>
+            </label>
+            <label class="settings__item" for="newPromotionsNotifications">
+              <p class="settings__item-name">Promotions</p>
+              <p class="settings__item-value">
+                <input type="checkbox" value="promotions" class="custom-checkbox" id="newPromotionsNotifications">
+              </p>
+            </label>
+            <div class="settings__item settings__item_desc settings__item_no-pointer">
+              <p class="settings__item-desc" id="genderNotice">
+                Control the emails you want to get — all of them, just the important stuff, or the bare minimum. You
+                can always unsubscribe from the bottom of any email.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="settings settings_nested" data-name="language">
+          <p class="settings__title">Language</p>
+          <div class="settings__list" id="settingsLang">
+            <label class="settings__item" for="engLang">
+              <p class="settings__item-name">English</p>
+              <p class="settings__item-value">
+                <input type="radio" name="lang" value="English" class="custom-radio" id="engLang">
+              </p>
+            </label>
+            <label class="settings__item" for="byLang">
+              <p class="settings__item-name">Belarussian</p>
+              <p class="settings__item-value">
+                <input type="radio" name="lang" value="Belarussian" class="custom-radio" id="byLang">
+              </p>
+            </label>
+            <label class="settings__item" for="ruLang">
+              <p class="settings__item-name">Russian</p>
+              <p class="settings__item-value">
+                <input type="radio" name="lang" value="Russian" class="custom-radio" id="ruLang">
+              </p>
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class="settings settings_nested" data-name="feedback">
+        <p class="settings__title">Feedback</p>
+        <form class="feedback" id="feedback-form">
+          <select name="questionType" class="feedback__select">
+            <option value="topic" disabled selected>Topic</option>
+            <option value="proposal">Proposal</option>
+            <option value="claim">Claim</option>
+            <option value="question">Question</option>
+          </select>
+          <textarea name="message" cols="30" rows="10" placeholder="Your message" class="feedback__textarea"></textarea>
+          <input type="submit" class="btn btn_center"></input>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="inner__col2">
+    <div class="inner__main-usercard">
+      <div class="usercard" id="mainUserCard" data-state="active">
+        <div class="usercard__inner">
+          <div class="usercard__slider">
+            <div class="user-slider">
+              <div class="user-slider__nav">
+              </div>
+              <div class="user-slider__arrows user-slider__arrows_hidden">
+                <div class="user-slider__arrow-left"></div>
+                <div class="user-slider__arrow-right"></div>
+              </div>
+              <div class="usercard__short-info" id="mainUserCardShortInfo">
+                <p><span class="usercard__name"></span> <span class="usercard__age"></span></p>
+                <p class="usercard__showfull">i</p>
+              </div>
+              <div class="usercard__hide-fullinfo"></div>
+              <div class="user-slider__photo-box">
+              </div>
+            </div>
+          </div>
+          <div class="usercard__info" id="mainUserCardInfo">
+            <div class="usercard__info-header">
+              <p><span class="usercard__info-name"></span> <span class="usercard__info-age"></span></p>
+              <p class="usercard__gender usercard__gender_woman">Woman</p>
+              <p class="usercard__city">Lives in <span class="usercard__city-name">Minsk</span></p>
+              <ul class="usercard__hobby-list">
+                <li class="usercard__hobby-item">Fashion</li>
+                <li class="usercard__hobby-item">Yoga</li>
+                <li class="usercard__hobby-item">Dancing</li>
+                <li class="usercard__hobby-item">Wine</li>
+                <li class="usercard__hobby-item">Politics</li>
+              </ul>
+            </div>
+            <div class="usercard__info-about">
+              Меня зовут Валя. Изучаю биологию, пишу диссертацию. Люблю свою работу.
+              Понимаю и люблю оперу, несколько лет занимаюсь балетом, практикую аштангу, не сижу в соцсетях, а ютубу
+              предпочту книгу или кино 😎
+              Нежно люблю Ремарка и Толкина.
+              Обожаю летать, атмосферу аэропортов.
+              Люблю Италию в целом и Сицилию в частности. Научу тебя разбираться в джелато 🍦
+              Всегда за любые активности,открыта новому, не люблю рутину.
+              Честность, позитив, вера в добро ✌🏻
+              Не разбiць, не спынiць, не стрымаць!
+            </div>
+          </div>
+        </div>
+        <div class="usercard__buttons">
+          <div class="usercard__button usercard__button_dislike" data-name="dislike"></div>
+          <div class="usercard__button usercard__button_superlike" data-name="superlike"></div>
+          <div class="usercard__button usercard__button_like" data-name="like"></div>
+        </div>
+      </div>
+      <div class="keys-panel">
+        <div class="keys-panel__btn-box">
+          <p class="keys-panel__btn" data-text="show">hide</p>
+        </div>
+        <ul class="keys-panel__list">
+          <li class="keys-panel__item keys-panel__item_dislike">dislike</li>
+          <li class="keys-panel__item keys-panel__item_like">like</li>
+          <li class="keys-panel__item keys-panel__item_open-profile">open profile</li>
+          <li class="keys-panel__item keys-panel__item_close-profile">close profile</li>
+          <li class="keys-panel__item keys-panel__item_super">super like</li>
+          <li class="keys-panel__item keys-panel__item_next">next photo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="inner__profile-usercard">
+      <div class="usercard usercard_h100 usercard_profile-card" id="profileUserCard">
+        <div class="usercard__inner">
+          <div class="usercard__slider usercard__slider_h70">
+            <div class="user-slider">
+              <div class="user-slider__nav">
+              </div>
+              <div class="user-slider__arrows user-slider__arrows_hidden">
+                <div class="user-slider__arrow-left"></div>
+                <div class="user-slider__arrow-right"></div>
+              </div>
+              <div class="user-slider__photo-box">
+              </div>
+            </div>
+          </div>
+          <div class="usercard__info usercard__info_visible">
+            <div class="usercard__info-header">
+              <p><span class="usercard__info-name"></span> <span class="usercard__info-age"></span></p>
+              <p class="usercard__gender usercard__gender_man"></p>
+              <p class="usercard__city">Lives in <span class="usercard__city-name"></span></p>
+              <ul class="usercard__hobby-list">
+              </ul>
+            </div>
+            <div class="usercard__info-about">
+            </div>
+          </div>
+        </div>
+        <div class="usercard__button-box">
+          <button class="btn" id="btnEditProfile">edit</button>
+          <button class="btn btn_settings" id="btnUserSettings">settings</button>
+          <button class="btn btn_hidden" id="btnSaveEditProfile">save</button>
+          <button class="btn btn_hidden" id="btnCancelEditProfile">cancel</button>
+        </div>
+        <div class="editcard">
+          <input type="file" accept="image/x-png,image/gif,image/jpeg" name="picture[]" id="userPhotoFileInput"
+            class="editcard__photo-file-input" />
+          <form action="" id="formEditUserPhotos">
+            <input type="hidden" name="photos" id="userPhotos">
+          </form>
+          <div class="editcard__gallery">
+            <div class="editcard__gallery-item" data-num="0"></div>
+            <div class="editcard__gallery-item" data-num="1"></div>
+            <div class="editcard__gallery-item" data-num="2"></div>
+            <div class="editcard__gallery-item" data-num="3"></div>
+            <div class="editcard__gallery-item" data-num="4"></div>
+            <div class="editcard__gallery-item" data-num="5"></div>
+            <div class="editcard__gallery-item" data-num="6"></div>
+            <div class="editcard__gallery-item" data-num="7"></div>
+            <div class="editcard__gallery-item" data-num="8"></div>
+          </div>
+          <form action="" id="formEditUserCard">
+            <div class="editcard__title">
+              <span class="editcard__title-text">About</span>
+            </div>
+            <div class="editcard__item">
+              <textarea name="about" class="editcard__about-textarea"></textarea>
+            </div>
+            <div class="editcard__title" id="passionsTitle">
+              passions
+            </div>
+            <input type="hidden" name="passions" id="editcardSelectedPassions">
+            <div class="editcard__item" id="editcardPassions">
+            </div>
+            <div class="editcard__title" id="editcardCityTitle">
+              city
+            </div>
+            <div class="editcard__item">
+              <input type="text" name="location" class="editcard__input" id="locationEditCard">
+            </div>
+            <div class="editcard__title" id="editcardGenderTitle">
+              Gender
+            </div>
+            <div class="js-genderEditCard">
+              <div class="editcard__item editcard__item_flex editcard__item_border-bottom">
+                <label class="editcard__item-name" for="editcardGenderMan">
+                  Man
+                </label>
+                <p class="editcard__item-value">
+                  <input type="radio" name="gender_id" value="1" data-num="1" data-text="Man" class="custom-radio"
+                    id="editcardGenderMan">
+                </p>
+              </div>
+              <div class="editcard__item editcard__item_flex editcard__item_border-bottom">
+                <label class="editcard__item-name" for="editcardGenderWoman">
+                  Woman
+                </label>
+                <p class="editcard__item-value">
+                  <input type="radio" name="gender_id" value="2" data-num="2" data-text="Woman" class="custom-radio"
+                    id="editcardGenderWoman">
+                </p>
+              </div>
+              <div class="editcard__item editcard__item_flex">
+                <label class="editcard__item-name" for="editcardGenderTrans">
+                  Trans
+                </label>
+                <p class="editcard__item-value">
+                  <input type="radio" name="gender_id" value="3" data-num="3" data-text="Trans" class="custom-radio"
+                    id="editcardGenderTrans">
+                </p>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="inner__messenger">
+      <div class="messenger">
+        <div class="messenger__header">
+          <div class="messenger__header-back"></div>
+          <div class="messenger__user-icon-box">
+            <div class="messenger__user-icon"></div>
+          </div>
+          <p class="messenger__header-title">
+            <span class="messenger__header-title-name"></span><span class="messenger__header-title-years"></span>
+          </p>
+          <div class="messenger__header-unmatch-box">
+            <p class="messenger__header-unmatch">unmatch</p>
+          </div>
+          <div class="messenger__close"></div>
+        </div>
+        <div class="messenger__body">
+          <div class="messenger__post-list">
+          </div>
+        </div>
+        <div class="messenger__footer">
+          <input type="text" placeholder="Type a message" class="messenger__input">
+          <div class="messenger__btn-box">
+            <button class="btn btn_messenger">send</button>
+          </div>
+        </div>
+      </div>
+      <div class="inner__match-usercard">
+        <div class="usercard usercard_h100" id="matchUserCard">
+          <div class="usercard__inner">
+            <div class="usercard__slider usercard__slider_h70">
+              <div class="user-slider">
+                <div class="user-slider__nav">
+                </div>
+                <div class="user-slider__arrows user-slider__arrows_hidden">
+                  <div class="user-slider__arrow-left"></div>
+                  <div class="user-slider__arrow-right"></div>
+                </div>
+                <div class="usercard__hide-fullinfo usercard__hide-fullinfo_visible-mobile"></div>
+                <div class="user-slider__photo-box">
+                </div>
+              </div>
+            </div>
+            <div class="usercard__info usercard__info_visible">
+              <div class="usercard__info-header">
+                <p><span class="usercard__info-name"></span> <span class="usercard__info-age"></span></p>
+                <p class="usercard__gender"></p>
+                <p class="usercard__city">Lives in <span class="usercard__city-name"></span></p>
+                <ul class="usercard__hobby-list">
+                </ul>
+              </div>
+              <div class="usercard__info-about">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inner__btn-box">
+          <button class="inner__btn inner__btn_unmatch">unmatch</button>
+          <button class="inner__btn inner__btn_report">report</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" id="icon-dialog">
+    <path
+      d="M1792 896q0 174-120 321.5t-326 233-450 85.5q-70 0-145-8-198 175-460 242-49 14-114 22-17 2-30.5-9t-17.5-29v-1q-3-4-.5-12t2-10 4.5-9.5l6-9 7-8.5 8-9q7-8 31-34.5t34.5-38 31-39.5 32.5-51 27-59 26-76q-157-89-247.5-220T0 896q0-130 71-248.5T262 443t286-136.5T896 256q244 0 450 85.5t326 233T1792 896z">
+    </path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="icon-tinder">
+    <path
+      d="M112.458 444.94c-52.552-53.411-46.316-141.005 16.824-237.006 11.479-17.46 23.381-33.313 37.072-49.489l11.392-13.432 1.13 11.991c1.729 18.782 4.265 29.072 10.023 40.823 3.609 7.387 9.543 15.314 12.145 17.615 1.965 1.768 1.041 2.784 11-2.301 65.59-35.893 72.357-94.473 68.66-144.839-1.285-14.771-4.533-31.248-8.563-43.36-1.545-4.669-2.445-8.343-1.967-8.192.479.149 8.648 7.893 18.164 17.226 90.967 89.029 140.18 182.246 146.561 277.646 1.996 109.336-60.156 167.619-150.615 180.004-77.19 11.934-130.52-6.073-171.826-46.686zm0 0">
+    </path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-user">
+    <g>
+      <ellipse cx="12" cy="8" rx="5" ry="6"></ellipse>
+      <path
+        d="M21.8 19.1c-.9-1.8-2.6-3.3-4.8-4.2-.6-.2-1.3-.2-1.8.1-1 .6-2 .9-3.2.9s-2.2-.3-3.2-.9c-.5-.2-1.2-.3-1.8 0-2.2.9-3.9 2.4-4.8 4.2-.7 1.3.4 2.8 1.9 2.8h15.8c1.5 0 2.6-1.5 1.9-2.9z">
+      </path>
+    </g>
+  </symbol>
+</svg>
