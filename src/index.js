@@ -3,12 +3,11 @@ import { showAnimatedLoader, hideAnimatedLoader } from './js/modules/animatedLoa
 import { readExchangeRatesFromLocalStorage } from './js/modules/readExchangeRatesFromLocalStorage';
 import { getBYRCurrentExchangeRate } from './js/modules/getBYRCurrentExchangeRate';
 
-showAnimatedLoader();
-
 let exchangeRates = readExchangeRatesFromLocalStorage();
 
 if (exchangeRates) {
   console.log(exchangeRates);
+  showAnimatedLoader();
 } else {
   exchangeRates = getBYRCurrentExchangeRate();
 }
